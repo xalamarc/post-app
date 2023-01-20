@@ -1,0 +1,19 @@
+GET http://localhost:3000/posts
+
+###
+
+DELETE http://localhost:3000/posts/63c8585b217deedb0007e05e
+
+### 
+
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+    "title": "Argentina",
+    "message": "las mejores vacaciones",
+    "tags": ["vacacions", "diversion"],
+    "likeCount": 5
+
+}
+
