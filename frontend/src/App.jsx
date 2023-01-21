@@ -7,6 +7,7 @@ import { getPosts } from './actions/posts'
 const App = () => {
   const dispatch = useDispatch()
   const [currentId, setCurrentId] = useState(0)
+
   useEffect(() => {
     dispatch(getPosts())
   }, [currentId, dispatch])
@@ -37,10 +38,10 @@ const App = () => {
     return (
       <div className='bg-gray-800 h-full'>
         <div className='relative flex justify-center p-20'>
-          <Form />
+          <Form currentId={currentId} setCurrentId={setCurrentId} />
         </div>
         <div className='relative flex justify-center md:flex md:justify-start'>
-          <Posts />
+          <Posts setCurrentId={setCurrentId} />
         </div>
       </div>
     )

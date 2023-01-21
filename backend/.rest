@@ -2,18 +2,32 @@ GET http://localhost:3000/posts
 
 ###
 
-DELETE http://localhost:3000/posts/63c8585b217deedb0007e05e
-
-### 
-
 POST http://localhost:3000/posts
 Content-Type: application/json
 
 {
-    "title": "Argentina",
-    "message": "las mejores vacaciones",
-    "tags": ["vacacions", "diversion"],
-    "likeCount": 5
-
+    "title": "Your title",
+    "message": "example message",
+    "tags": ["tags"],
+    "likeCount": 5,
+    "selectedFile": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Gran_Sabana_paisaje_1.jpg"
 }
+
+###
+
+GET http://localhost:3000/posts/63cbd4008e6bc26cf0c839ba
+
+###
+PATCH http://localhost:3000/posts/63cbd4008e6bc26cf0c839ba 
+Content-Type: application/json
+
+{
+    "title": "Hello World"
+}
+
+###
+
+DELETE  http://localhost:3000/posts/63cbd4008e6bc26cf0c839ba 
+
+###
 

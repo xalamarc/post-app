@@ -1,5 +1,5 @@
 import express from 'express'
-const router = express.Router()
+
 import {
   getPosts,
   getPost,
@@ -8,6 +8,8 @@ import {
   likePost,
   deletePost,
 } from '../controllers/PostControllers.js'
+
+const router = express.Router()
 
 router.get('/', getPosts)
 router.post('/', createPost)
